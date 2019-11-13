@@ -5,6 +5,7 @@
 
 {# SETUP  #}
 {% set breadcrumb = craft.breadcrumb.config %}
+{% set social = entry.blogSocials.one() %}
 
 {# Template #}
 
@@ -31,10 +32,18 @@
       <h3 id="article-description">{{ entry.blogIntroduction }}</h3>       
     </section>
   </header>
+   
+    <div>    
 
-    <div>        
-      {{ entry.blogBody }}
-
-    </div>
+      <section>   
+        {{ entry.blogBody }}
+      </section>
+      <br/>
+  
+      {% if social %}
+        <section>        
+        <img class="social-layout" src="{{ social.getUrl()}}" alt="{{ social.title }}">
+        </section>
+      {% endif %}
+    </div>  
 </section>
-
