@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cadc7169cd2d5c8ea7560e056fecffb0",
+    "content-hash": "b22ebd01fed2188555fff54e69e433a5",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -3835,6 +3835,65 @@
                 "yii2"
             ],
             "time": "2018-09-23T22:00:47+00:00"
+        },
+        {
+            "name": "youandmedigital/breadcrumb",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/youandmedigital/craft-breadcrumb.git",
+                "reference": "28a462407a1ede00171e8a0f3dd552d53be0738b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/youandmedigital/craft-breadcrumb/zipball/28a462407a1ede00171e8a0f3dd552d53be0738b",
+                "reference": "28a462407a1ede00171e8a0f3dd552d53be0738b",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Breadcrumb",
+                "handle": "breadcrumb",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/youandmedigital/craft-breadcrumb/master/CHANGELOG.md",
+                "documentationUrl": "https://github.com/youandmedigital/craft-breadcrumb/blob/master/README.md",
+                "components": {
+                    "breadcrumbService": "youandmedigital\\breadcrumb\\services\\BreadcrumbService"
+                },
+                "class": "youandmedigital\\breadcrumb\\Breadcrumb"
+            },
+            "autoload": {
+                "psr-4": {
+                    "youandmedigital\\breadcrumb\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "You & Me Digital",
+                    "homepage": "https://youandme.digital"
+                }
+            ],
+            "description": "Generate a simple breadcrumb",
+            "keywords": [
+                "Craft",
+                "breadcrumb",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "development",
+                "navigation",
+                "templating",
+                "utilities"
+            ],
+            "time": "2019-11-07T14:53:07+00:00"
         },
         {
             "name": "zendframework/zend-escaper",

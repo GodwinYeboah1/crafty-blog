@@ -1,0 +1,20 @@
+body {
+  color: #666;
+  font-family: sans-serif;
+  line-height: 1.4em;
+  background-color: #f8f8f8;
+}
+a {
+  color: #006699;
+}
+
+
+article {
+  border-top: 2px solid lightgray;
+  height: 15%;
+}
+
+.changeMe{
+  text-align: right;
+  margin-top: -51px;
+}

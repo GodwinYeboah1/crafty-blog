@@ -1,1 +1,50 @@
-<h1>{{entry.title}}</h1>
+{# HOMEPAGE #}
+<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/breadcrumb.css">
+<link rel="stylesheet" href="../assets/css/homepage_teaser.css">
+
+{# SETUP  #}
+{% set breadcrumb = craft.breadcrumb.config %}
+
+{# Template #}
+<section id="main">
+   {# breadcrumb section  #}
+
+<nav class="breadcrumbs">
+  <a href="#" title="Home" data-icon="&#xE88A;"><span class="hidden">Home</span></a> &gt;
+  {% for crumb in breadcrumb  %}
+    {% if loop.last %}
+      <a href="{{ crumb.url }}">{{ crumb.title }}</a> &gt;
+    {% else %}
+        <a class="c-breadcrumb__link" href="{{ crumb.url }}">
+            <span>{{ crumb.title }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+</nav>
+
+<section id="main">
+  
+  <header>
+    <h1>{{ entry.title }}</h1>
+    
+    <section id="article-info">
+      <h2 id="article-title">Blogs list </h2>
+      <h3 id="article-description">{{ entry.blogIntroduction }}</h3>
+    </section>
+  </header>
+
+  {% set bquery = craft.entries()
+    .section('blog')
+    .limit(10) %}
+
+    {% paginate bquery as pageInfo, pageEntries %}
+    
+    {% for blog in pageEntries %}
+        <article>
+          <section id="blog-info">
+          <a href="{{ blog.url }}"> <h4>{{ blog.title }}</h4>  <h4 class="changeMe"> View more </h4></a>
+          </section>
+        </article>
+    {% endfor %}
+</section>
